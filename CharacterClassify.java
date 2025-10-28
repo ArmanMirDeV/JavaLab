@@ -8,10 +8,28 @@ public class CharacterClassify {
         for (int i = 0; i<str.length(); i++){
          char ch=str.charAt(i);
             if(ch>'a' && ch<'z' || ch>'A' && ch<'Z'){
-                
-            }
+            ch= Character.toLowerCase(ch);
+            if(ch=='a' || ch=='i' || ch=='e' || ch=='o' || ch=='u')
+            vowel++;
+            else consonants++;}
+
+             else if(ch>'0' && ch<'9'){
+            digit++;
+        }
+        else{
+            specialChar++;
         }
 
+
+
+
+        }
+
+        System.out.println("Vowel: "  + vowel);
+        System.out.println("Consonant:" +consonants);
+        System.out.println("Digits: "+digit);
+        System.out.println("Special char: "+specialChar);
+        
     }
 
 
